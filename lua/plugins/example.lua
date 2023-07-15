@@ -123,6 +123,8 @@ return {
       ---@type table<string, fun(server:string, opts:_.lspconfig.options):boolean?>
       setup = {
         -- example to setup with typescript.nvim
+        clangd = {},
+        pyright = {},
         tsserver = function(_, opts)
           require("typescript").setup({ server = opts })
           return true
@@ -179,7 +181,7 @@ return {
     "nvim-lualine/lualine.nvim",
     event = "VeryLazy",
     opts = function(_, opts)
-      table.insert(opts.sections.lualine_x, "😄")
+      --table.insert(opts.sections.lualine_x, "😄")
     end,
   },
 
