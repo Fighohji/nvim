@@ -13,6 +13,8 @@ return {
             open_mapping = [[<c-\>]],
             direction = 'float',
             hide_numbers = false,
+            shell = "pwsh -nologo",
+            start_in_insert = true,
         },
     }
 }
