@@ -26,7 +26,7 @@ return {
       },
       -- CWD -> current working directory PROBLEM -> 	problem name
       -- details https://github.com/xeluxee/competitest.nvim#receive-modifiers
-      received_problems_path = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)/$(PROBLEM).$(FEXT)",
+      received_problems_path = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)/$(PROBLEM)/$(PROBLEM).$(FEXT)",
       received_contests_directory = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)",
       received_contests_problems_path = "$(PROBLEM)/main.$(FEXT)",
     })
