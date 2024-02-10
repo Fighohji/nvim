@@ -11,6 +11,6 @@ return {
         null_ls.builtins.formatting.clang_format,
       },
     })
-    vim.keymap.set('n', '<C-F>', vim.lsp.buf.format, {})
+    vim.keymap.set('n', '<C-F>', vim.lsp.buf.format, { desc = "Format File" })
   end
 }

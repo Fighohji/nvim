@@ -38,7 +38,7 @@ return {
         end,
       })
     end
-   local alpha = require('alpha')
+    local alpha = require('alpha')
     alpha.setup(dashboard.config)
     vim.api.nvim_create_autocmd("User", {
       once = true,

@@ -5,7 +5,6 @@ return {
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
       local wk = require("which-key")
-      -- local builtin = require("telescope.builtin")
       wk.register({
         f = {
           name = "file",

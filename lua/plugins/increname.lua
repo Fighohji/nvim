@@ -4,7 +4,7 @@ return {
     require("inc_rename").setup({
       vim.keymap.set("n", "<leader>rn", function()
         return ":IncRename " .. vim.fn.expand("<cword>")
-      end, { expr = true , desc = "rename"})
+      end, { expr = true, desc = "rename" })
     })
   end,
 }
