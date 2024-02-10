@@ -10,7 +10,7 @@ return {
       --  interface = 'split',
       -- },
       compile_command = {
-        cpp = { exec = 'g++', args = { '$(FNAME)', '-g', '-o', '$(FNOEXT)' } },
+        cpp = { exec = 'g++', args = { '$(FNAME)', '-std=c++20', '-g', '-o', '$(FNOEXT)' } },
         -- some_lang = { exec = 'some_compiler', args = { '$(FNAME)' } },
       },
       run_command = {
