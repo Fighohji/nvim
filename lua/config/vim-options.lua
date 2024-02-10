@@ -6,6 +6,7 @@ vim.cmd("set smarttab")
 vim.cmd("set autoindent")
 
 vim.g.mapleader = " "
+vim.cmd("set cursorline")
 vim.cmd("set relativenumber")
 vim.cmd("set clipboard=unnamedplus")
 vim.cmd("set history=1000")
