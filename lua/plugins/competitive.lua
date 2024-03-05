@@ -21,12 +21,12 @@ return {
       maximum_time = 2000,
       -- view_output_diff = true,
       template_file = {
-        cpp = "~/template/head.cpp",
-        py = "~/template/head.py",
+        cpp = "~/Competitive Programming/template/head.cpp",
+        py = "~/Competitive Programming/template/head.py",
       },
       -- CWD -> current working directory PROBLEM -> 	problem name
       -- details https://github.com/xeluxee/competitest.nvim#receive-modifiers
-      received_problems_path = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)/$(PROBLEM)/$(PROBLEM).$(FEXT)",
+      received_problems_path = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)/$(PROBLEM)/main.$(FEXT)",
       received_contests_directory = "$(HOME)/Competitive Programming/$(JUDGE)/$(CONTEST)",
       received_contests_problems_path = "$(PROBLEM)/main.$(FEXT)",
     })

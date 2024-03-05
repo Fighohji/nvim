@@ -33,6 +33,7 @@ return {
       vim.keymap.set('n', 'gD', vim.lsp.buf.definition, { desc = "definition" })
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
       vim.keymap.set({ 'n', 'v' }, '<leader>ca', vim.lsp.buf.code_action, { desc = "code action" })
+      vim.keymap.set({ 'n', 'i' }, '<C-f>', vim.lsp.buf.format, { desc = "code format" })
     end
   }
 }
