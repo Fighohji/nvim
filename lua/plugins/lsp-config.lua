@@ -27,7 +27,17 @@ return {
         capabilities = capabilities
       })
       lspconfig.pylsp.setup({
-        capabilities = capabilities
+        capabilities = capabilities,
+        settings = {
+          pylsp = {
+            plugins = {
+              pylint = {
+                enabled = true,
+                args = { "--output-format=json" },
+              },
+            },
+          },
+        }
       })
       vim.keymap.set('n', 'gd', vim.lsp.buf.declaration, { desc = "declaration" })
       vim.keymap.set('n', 'gD', vim.lsp.buf.definition, { desc = "definition" })

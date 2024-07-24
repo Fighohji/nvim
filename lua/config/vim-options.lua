@@ -13,4 +13,5 @@ vim.cmd("set history=1000")
 vim.cmd("set scrolloff=8")
 vim.cmd("set whichwrap+=<,>,h,l")
 vim.cmd("set noswapfile")
+vim.opt.showmode = false -- for NeoVim >= 0.10
 vim.opt.smoothscroll = true -- for NeoVim >= 0.10
