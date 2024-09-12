@@ -26,13 +26,11 @@ return {
       }
     }
     local wk = require("which-key")
-    wk.register({
-      b = {
-        name = "Buffer",
-        c = { "<cmd>bw<cr>", "Buffer Close" },
-        p = { "<cmd>bp<cr>", "Previous Buffer" },
-        n = { "<cmd>bn<cr>", "Next Buffer" },
-      },
-    }, { prefix = "<leader>" })
+    wk.add({
+      { "<leader>b",  group = "Buffer", icon = "󰛼" },
+      { "<leader>bc", "<cmd>bw<cr>",   desc = "Buffer Close" },
+      { "<leader>bp", "<cmd>bp<cr>",   desc = "Previous Buffer" },
+      { "<leader>bn", "<cmd>bn<cr>",   desc = "Next Buffer" },
+    })
   end
 }

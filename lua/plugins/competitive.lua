@@ -10,7 +10,7 @@ return {
       --  interface = 'split',
       -- },
       compile_command = {
-        cpp = { exec = 'g++', args = { '$(FNAME)', '-std=c++20', '-g', '-o', '$(FNOEXT)' } },
+        cpp = { exec = 'g++', args = { '$(FNAME)', '-std=c++20', '-O2', '-o', '$(FNOEXT)' } },
         -- some_lang = { exec = 'some_compiler', args = { '$(FNAME)' } },
       },
       run_command = {
@@ -31,19 +31,17 @@ return {
       received_contests_problems_path = "$(PROBLEM)/main.$(FEXT)",
     })
     local wk = require("which-key")
-    wk.register({
-      t = {
-        name = "Test",
-        t = { "<cmd>CompetiTest run<CR>", "Run" },
-        e = { "<cmd>CompetiTest edit_testcase<CR>", "Edit" },
-        a = { "<cmd>CompetiTest add_testcase<CR>", "Add" },
-        d = { "<cmd>CompetiTest delete_testcase<CR>", "Del" },
-        r = { "<cmd>CompetiTest receive testcases<CR>", "Receive testcases" },
-        p = { "<cmd>CompetiTest receive problem<CR>", "Receive problem" },
-        c = { "<cmd>CompetiTest receive contest<CR>", "Receive contest" },
-        u = { "<cmd>CompetiTest show_ui<CR>", "Show ui" },
-        n = { "<cmd>CompetiTest run_no_compile<CR>", "Run No Compile" },
-      }
-    }, { prefix = "<leader>" })
+    wk.add({
+      { "<leader>t",  group = "Test" },
+      { "<leader>ta", "<cmd>CompetiTest add_testcase<CR>",      desc = "Add" },
+      { "<leader>tc", "<cmd>CompetiTest receive contest<CR>",   desc = "Receive contest" },
+      { "<leader>td", "<cmd>CompetiTest delete_testcase<CR>",   desc = "Del" },
+      { "<leader>te", "<cmd>CompetiTest edit_testcase<CR>",     desc = "Edit" },
+      { "<leader>tn", "<cmd>CompetiTest run_no_compile<CR>",    desc = "Run No Compile" },
+      { "<leader>tp", "<cmd>CompetiTest receive problem<CR>",   desc = "Receive problem" },
+      { "<leader>tr", "<cmd>CompetiTest receive testcases<CR>", desc = "Receive testcases" },
+      { "<leader>tt", "<cmd>CompetiTest run<CR>",               desc = "Run" },
+      { "<leader>tu", "<cmd>CompetiTest show_ui<CR>",           desc = "Show ui" },
+    })
   end
 }

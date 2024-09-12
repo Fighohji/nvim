@@ -31,8 +31,12 @@ return {
         settings = {
           pylsp = {
             plugins = {
+              pycodestyle = {
+                -- 设置忽略的级别
+                ignore = { 'W', 'I', 'E501' }, -- 忽略 warning 和 info
+              },
               pylint = {
-                enabled = true,
+                enabled = false,
                 args = { "--output-format=json" },
               },
             },

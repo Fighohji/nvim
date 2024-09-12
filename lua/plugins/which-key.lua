@@ -7,16 +7,10 @@ return {
   end,
   config = function()
     local wk = require("which-key")
-    wk.register({
-      c = {
-        name = "code",
-      },
-      w = {
-        name = "windows",
-      },
-      r = {
-        name = "re"
-      }
-    }, { prefix = "<leader>" })
+    wk.add({
+      { "<leader>c", group = "code", icon = '' },
+      { "<leader>r", group = "re", icon = "󰑕" },
+      { "<leader>w", group = "windows", icon = "" },
+    })
   end
 }
