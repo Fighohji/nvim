@@ -10,7 +10,8 @@ return {
       --  interface = 'split',
       -- },
       compile_command = {
-        cpp = { exec = 'g++', args = { '$(FNAME)', '-std=c++20', '-O2', '-o', '$(FNOEXT)' } },
+        -- clang++ -Xlinker -stack_size -Xlinker 0x8000000 -o main main.cpp -std=c++20
+        cpp = { exec = 'clang++', args = { '$(FNAME)', '-Xlinker', '-stack_size', '-Xlinker', '0x8000000', '-std=c++20', '-O2', '-o', '$(FNOEXT)' } },
         -- some_lang = { exec = 'some_compiler', args = { '$(FNAME)' } },
       },
       run_command = {
@@ -18,8 +19,11 @@ return {
         python = { exec = 'python3', args = { '$(FNAME)' } }, -- if windows, delete this line
         -- some_lang = { exec = 'some_interpreter', args = { '$(FNAME)' } },
       },
-      maximum_time = 2000,
+      maximum_time = 4000,
       -- view_output_diff = true,
+      testcases_single_file_format = "$(FNOEXT).testcases",
+      testcases_input_file_format = "$(TCNUM).in",
+      testcases_output_file_format = "$(TCNUM).out",
       template_file = {
         cpp = "~/Competitive Programming/template/head.cpp",
         py = "~/Competitive Programming/template/head.py",
